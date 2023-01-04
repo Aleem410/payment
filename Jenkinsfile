@@ -1,22 +1,3 @@
-pipeline {
- agent any
-  stages {
-   stage('code quality'){
-     steps {
-       echo 'code quality'
-     }
-   }
+@Library('roboshop') _
 
-   stage('Test cases'){
-     steps {
-       echo 'Test cases'
-        }
-      }
-
-   stage('Publish release'){
-     steps {
-        echo 'Publish release'
-       }
-    }
-  }
-}
+python()
